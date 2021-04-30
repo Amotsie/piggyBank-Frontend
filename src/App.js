@@ -1,24 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
+import LoginScreen from "./components/screens/LoginScreen";
+import Welcome from "./components/screens/WelcomeScreen";
+import ForgotPasswordScreen from "./components/screens/ForgotPasswordScreen";
+import Footer from "./components/universal/Footer";
+import NewTransactionPage from "./components/pages/NewTransactionPage";
+import AdminUserPage from "./components/pages/AdminUserPage";
+import RegisterScreen from "./components/screens/RegisterScreen";
 
+{
+  /* <Route exact path="/adminhome" component={}></Route> */
+}
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main>
+      <BrowserRouter>
+        <Switch>
+          <Route exact path="/" component={LoginScreen}></Route>
+          <Route exact path="/welcome" component={Welcome}></Route>
+          <Route exact path="/adminusers" component={AdminUserPage}></Route>
+
+          <Route exact path="/register" component={RegisterScreen}></Route>
+          <Route
+            exact
+            path="/forgotpassword"
+            component={ForgotPasswordScreen}
+          ></Route>
+          <Route
+            exact
+            path="/newtransaction"
+            component={NewTransactionPage}
+          ></Route>
+        </Switch>
+      </BrowserRouter>
+      <Footer />
+    </main>
   );
 }
 

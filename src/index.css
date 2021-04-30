@@ -1,13 +1,122 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+@import url("https://fonts.googleapis.com/css2?family=Sora&display=swap");
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+  --primary-color: #53ad88;
+  --secondary-color: #167bb5;
+  --tertiary-color: #ed6174;
+}
+
+* {
+  font-family: "Sora", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  transition: all 0.2s ease-out;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.7;
+  background: #eee;
+  color: #333;
+}
+
+.container {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+.form-group,
+.form-group label,
+.form-group input {
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.form-group label {
+  font-size: 0.8rem;
+}
+
+.form-group input {
+  padding: 10px 20px;
+  border: none;
+  border-bottom: 3px solid transparent;
+  background-color: #eee;
+  outline-width: 0;
+  font-size: 0.75rem;
+}
+
+.form-group input:focus {
+  border-bottom: 3px solid var(--primary-color);
+}
+
+.btn {
+  padding: 10px 20px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 1rem;
+  border: none;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.btn:hover {
+  transform: translateY(-0.3rem);
+  color: calc(--primary-color-30);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+  transform: translateY(-0.2rem);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+/* -------------------------------- */
+.error-message {
+  font-size: 0.75rem;
+  width: 100%;
+  display: inline-block;
+  padding: 5px;
+  color: red;
+  text-align: center;
+  margin: 0.5rem 0;
+}
+
+.success-message {
+  width: 100%;
+  display: inline-block;
+  padding: 5px;
+  background: green;
+  color: #fff;
+  text-align: center;
+  margin: 0.5rem 0;
+}
+
+.btn-newTrans {
+  background-color: #f44336;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 5rem;
+}
+
+.btn-newTrans:hover {
+  font-size: 14px;
+  background-color: white;
+  color: black;
+  border: 2px solid #f44336;
 }
